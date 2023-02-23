@@ -74,7 +74,7 @@ export default function Index() {
           justifyContent: 'center',
           alignItems: 'center',
           height: '100vh',
-          width: '100vw',
+          width: '100%',
         }}
       >
         <h1 onClick={() => console.log('title clicked!')}>
