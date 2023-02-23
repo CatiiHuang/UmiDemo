@@ -11,7 +11,6 @@ import { history } from 'umi';
 const { Header, Content, Sider } = Layout;
 
 const Index = (props) => {
-  console.log(props);
   const {
     route: { routes: pageRoutes = [] },
   } = props;
@@ -34,11 +33,13 @@ const Index = (props) => {
               height: '100%',
               borderRight: 0,
             }}
-            items={pageRoutes.map(({ path, name }) => ({
-              key: path,
-              label: name,
-            }))}
-            onClick={menuHandleClick}
+            items={pageRoutes
+              .filter(({ name }) => !!name)
+              .map(({ path, name }) => ({
+                key: path,
+                label: name,
+              }))}
+            onSelect={menuHandleClick}
           />
         </Sider>
         <Layout
