@@ -1,12 +1,22 @@
 export const routes = [
-  { exact: true, path: '/index', component: './Index/index' },
   {
-    path: '/user',
-    component: './User/index',
-    routes: [{ path: '/user/detail', component: './UserDetail/index' }],
+    exact: true,
+    path: '/Index/index',
+    component: '@/pages/Index/index',
+    routes: [
+      {
+        path: '/',
+        name: '页面水印',
+        component: '@/pages/WaterMarked/index',
+      },
+      {
+        path: '/virtual-scroll',
+        name: '虚拟滚动',
+        component: '@/pages/VirtualScroll/index',
+      },
+    ],
   },
-  { path: '/virtual-scroll', component: './VirtualScroll/index' },
-  { path: '/water-marked', component: './WaterMarked/index' },
+
   // 末位匹配
-  { component: './Index/index' },
+  { path: '/', redirect: '/Index/index' },
 ];

@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "start": "umi dev",
-    "build": "umi build",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider & umi dev ",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider & umi build",
     "postinstall": "umi generate tmp",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "test": "umi-test",
@@ -20,7 +20,9 @@
     ]
   },
   "dependencies": {
+    "@ant-design/icons": "^5.0.1",
     "@ant-design/pro-layout": "^6.5.0",
+    "antd": "^5.2.2",
     "react": "17.x",
     "react-dom": "17.x",
     "umi": "^3.5.36"
@@ -34,5 +36,6 @@
     "prettier": "^2.2.0",
     "typescript": "^4.1.2",
     "yorkie": "^2.0.0"
-  }
+  },
+  "repository": "https://github.com/CatiiHuang/UmiDemo.git"
 }
