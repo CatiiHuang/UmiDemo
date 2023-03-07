@@ -16,6 +16,13 @@ export const routes = [
         name: '虚拟滚动',
         component: '@/pages/VirtualScroll/index',
       },
+
+      {
+        exact: true,
+        path: '/index/JSONToJava',
+        name: 'JSONToJava',
+        component: '@/pages/JSONToJava/index',
+      },
     ],
   },
 
