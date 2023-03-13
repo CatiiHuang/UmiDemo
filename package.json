@@ -22,6 +22,7 @@
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
     "@ant-design/pro-layout": "^6.5.0",
+    "@antv/xflow": "^1.0.54",
     "antd": "^5.2.2",
     "json-beautify": "^1.1.1",
     "json2csharp": "^1.0.3",

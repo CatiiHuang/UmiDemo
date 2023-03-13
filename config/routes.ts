@@ -23,6 +23,18 @@ export const routes = [
         name: 'JSONToJava',
         component: '@/pages/JSONToJava/index',
       },
+      {
+        exact: true,
+        path: '/index/XFlowExample',
+        name: 'XFlowExample',
+        component: '@/pages/XFlowExample/index',
+      },
+      {
+        exact: true,
+        path: '/index/XFlowDemo',
+        name: 'XFlowDemo',
+        component: '@/pages/XFlowDemo/index',
+      },
     ],
   },
 

@@ -1,8 +1,4 @@
-import {
-  LaptopOutlined,
-  NotificationOutlined,
-  UserOutlined,
-} from '@ant-design/icons';
+import { LaptopOutlined } from '@ant-design/icons';
 import styles from './index.less';
 import '@/styles/normalize.css';
 import { Layout, Menu } from 'antd';
