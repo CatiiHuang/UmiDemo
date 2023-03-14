@@ -3,6 +3,7 @@ import { Tooltip, Popconfirm, Form, Input, Select } from 'antd';
 import styles from './NormalEdge.less';
 import { PlusSquareOutlined } from '@ant-design/icons';
 import { useState } from 'react';
+import { BranchesOutlined } from '@ant-design/icons';
 
 export const NormalEdge: NsGraph.IEdgeRender = ({ data: edgeData }) => {
   const [customData, setCustomData] = useState(edgeData);
@@ -65,6 +66,7 @@ export const NormalEdge: NsGraph.IEdgeRender = ({ data: edgeData }) => {
   return (
     <div className={styles['edge-container']}>
       <Popconfirm
+        icon={<BranchesOutlined />}
         title="分流条件"
         showCancel={false}
         onConfirm={onConfirm}
