@@ -1,7 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { uuidv4 } from '@antv/xflow';
 import { XFlowNodeCommands } from '@antv/xflow';
-import { TriggleNodeID, ConditionNodeID, ActionNodeID } from './constant';
+import {
+  TriggleNodeID,
+  ConditionNodeID,
+  ActionNodeID,
+  ShuntNodeID,
+} from './constant';
 import type { NsNodeCmd } from '@antv/xflow';
 import type { NsNodeCollapsePanel } from '@antv/xflow';
 import { Card } from 'antd';
@@ -79,11 +84,29 @@ export const nodeDataService: NsNodeCollapsePanel.INodeDataService = async (
           parentId: '5',
           renderKey: ConditionNodeID,
         },
+      ],
+    },
+    {
+      id: 'S-分流',
+      header: 'S-分流',
+      children: [
+        {
+          id: '6',
+          label: '分流组件1',
+          parentId: '5',
+          renderKey: ShuntNodeID,
+        },
+        {
+          id: '7',
+          label: '分流组件2',
+          parentId: '5',
+          renderKey: ShuntNodeID,
+        },
         {
           id: '8',
-          label: '分流组件',
+          label: '分流组件3',
           parentId: '5',
-          renderKey: ConditionNodeID,
+          renderKey: ShuntNodeID,
         },
       ],
     },

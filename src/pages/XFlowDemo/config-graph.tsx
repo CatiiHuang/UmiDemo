@@ -4,6 +4,7 @@ import { XFlowNodeCommands } from '@antv/xflow';
 import { createHookConfig, DisposableCollection } from '@antv/xflow';
 import { NormalEdge } from './react-edge/NormalEdge';
 import {
+  ShuntNodeID,
   ActionNodeID,
   NormalEdgeID,
   TriggleNodeID,
@@ -13,12 +14,13 @@ import {
 import { ConditionNode } from './react-node/ConditionNode';
 import { TriggleNode } from './react-node/TriggleNode';
 import { ActionNode } from './react-node/ActionNode';
+import { ShuntNode } from './react-node/ShuntNode';
 import { GroupNode } from './react-node/group';
 
 export const useGraphHookConfig = createHookConfig<IProps>((config, proxy) => {
   // 获取 Props
   const props = proxy.getValue();
-  console.log('get main props', props);
+
   config.setRegisterHook((hooks) => {
     const disposableList = [
       hooks.reactEdgeLabelRender.registerHook({
@@ -31,10 +33,11 @@ export const useGraphHookConfig = createHookConfig<IProps>((config, proxy) => {
       hooks.reactNodeRender.registerHook({
         name: 'add react node',
         handler: async (renderMap) => {
-          renderMap.set(GROUP_NODE_RENDER_ID, GroupNode);
+          renderMap.set(ShuntNodeID, ShuntNode);
           renderMap.set(ActionNodeID, ActionNode);
           renderMap.set(TriggleNodeID, TriggleNode);
           renderMap.set(ConditionNodeID, ConditionNode);
+          renderMap.set(GROUP_NODE_RENDER_ID, GroupNode);
         },
       }),
       // 注册修改graphOptions配置的钩子

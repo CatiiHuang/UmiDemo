@@ -37,9 +37,6 @@ export const useCmdConfig = createCmdConfig((config) => {
           args.edgeConfig = {
             ...args.edgeConfig,
             connector: { name: 'rounded' },
-            router: {
-              name: 'manhattan',
-            },
           };
         },
       }),

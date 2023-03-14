@@ -1,6 +1,7 @@
 export const NODE_WIDTH = 180;
 export const NODE_HEIGHT = 36;
 
+export const ShuntNodeID = 'ShuntNode';
 export const ActionNodeID = 'ActionNode';
 export const NormalEdgeID = 'NormalEdge';
 export const TriggleNodeID = 'TriggleNode';

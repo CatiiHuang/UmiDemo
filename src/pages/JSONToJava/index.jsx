@@ -4,7 +4,6 @@ import { Input, Button, message } from 'antd';
 import * as jsonBeautify from 'json-beautify';
 import styles from './index.less';
 const { TextArea } = Input;
-console.log(json2csharp);
 
 const Index = () => {
   const [jsonInpit, setJsonInput] = useState(`{ 
